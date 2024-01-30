@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
     <Typography variant='h1' color={"white"} sx={{width:"800px"}}>Di Domenica Valentin</Typography>
-    <Typography>backend developer</Typography>
+    <Typography>backend developer</Typography>  
     </>
   )
 }
