@@ -9,7 +9,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  transition: 0.3s;
+  transition: 0.8s;
 }
 
 .links {
@@ -62,7 +62,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: 3s;
+    transition: 0.8s;
   }
   .links {
     padding: 1rem 0;

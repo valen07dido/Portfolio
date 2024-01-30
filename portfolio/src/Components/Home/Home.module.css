@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+}
+.iconDev{
+    max-width:300px;
+    max-height: 300px;
+    border-radius: 50%;
+}
+.aboutText{
+    color: white;
+}
+.list{
+
+    color: white;
+}
+.containerTech{
+    margin: 50px;
+}
