@@ -38,6 +38,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
+        <a href="">esta seria la ubicacion</a>
       
     </div>
   );
