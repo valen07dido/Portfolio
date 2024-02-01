@@ -1,44 +1,29 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
-  const redes = [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/valentin-di-domenica-a6186822a",
-      icon: <FaLinkedin />,
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/valen07dido",
-      icon: <FaGithub />,
-    },
-    {
-      name: "Email",
-      url: "mailto:valendido69@gmail.com",
-      icon: <FaEnvelope />,
-    },
-    {
-      name: "Teléfono",
-      url: "tel:+5493413164761",
-      icon: <FaPhone />,
-    },
-  ];
+
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Redes:</h2>
-      <div className={styles.containerNet}>
-        {redes.map((red) => (
-          <div className={styles.network}>
-            <a href={red.url} className={styles.link}>
-              {red.icon}
-              <span className={styles.name}>{red.name}</span>
-            </a>
+      <div>
+        <form action="" className={styles.form}>
+          <h1>Contactame</h1>
+          <div className={styles.inputGroup}>
+            <input type="text" name="" id="" required />
+            <label htmlFor="">nombre</label>
           </div>
-        ))}
+          <div className={styles.inputGroup}>
+            <input type="text" name="" id="" required />
+            <label htmlFor="">email</label>
+          </div>
+          <div className={styles.inputGroup}>
+            <textarea name="" id="" cols="77" rows="10" required></textarea>
+            <label htmlFor="">mensaje</label>
+          </div>
+        </form>
       </div>
+
     </div>
   );
 };
