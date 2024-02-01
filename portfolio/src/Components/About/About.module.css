@@ -1,0 +1,20 @@
+.titles{
+    color: white;
+    margin: 20px;
+}
+.content{
+    color: white;
+    font-size:large;
+    font-weight: 500;
+    width: 80%;
+    margin: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}

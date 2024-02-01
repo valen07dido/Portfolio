@@ -1,21 +1,37 @@
-.container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10%;
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10%;
 }
-.iconDev{
-    max-width:300px;
-    max-height: 300px;
-    border-radius: 50%;
+.iconDev {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 50%;
 }
-.aboutText{
-    color: white;
-}
-.list{
 
-    color: white;
+.list {
+  color: white;
 }
-.containerTech{
-    margin: 50px;
+.containerTech {
+  margin: 50px;
+}
+.icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.element {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
+}
+.tech{
+    margin: 20px;
+}
+.name{
+ font-size: 10vh;
+}
+.redes{
+    color:white;
 }
