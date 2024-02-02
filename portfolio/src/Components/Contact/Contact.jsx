@@ -18,8 +18,7 @@ const Contact = () => {
             <label htmlFor="">email</label>
           </div>
           <div className={styles.inputGroup}>
-            <textarea name="" id="" cols="77" rows="10" required></textarea>
-            <label htmlFor="">mensaje</label>
+            <textarea name="" id="" cols="80" rows="10" placeholder="Escribe tu mensaje aqui..." required></textarea>
           </div>
         </form>
       </div>
