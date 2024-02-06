@@ -1,0 +1,31 @@
+.title {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.containerNet {
+  display: flex;
+}
+.network {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.link {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: x-large;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+.container {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+}

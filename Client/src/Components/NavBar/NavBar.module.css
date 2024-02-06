@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.contain {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  transition: 0.8s;
+}
+
+.links {
+  margin: 10px;
+}
+
+.buttons {
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  border: none;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+.home {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1040px) {
+  .contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: -3;
+  }
+  .active {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.8s;
+  }
+  .links {
+    padding: 1rem 0;
+  }
+  .buttons {
+    font-size: 2rem;
+  }
+  .ButtonIn {
+    font-size: 2rem;
+  }
+  .hamburger {
+    color: #fff;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+.ButtonIn {
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  border: none;
+  &:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+}
