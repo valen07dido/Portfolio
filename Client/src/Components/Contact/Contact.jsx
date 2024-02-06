@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <div className={styles.container}>
       <div>
-        <form action="" className={styles.form}>
+        <form action="https://formsubmit.co/valendido69@gmail.com" method="POST" className={styles.form} onSubmit={null}>
           <h1>Contactame</h1>
           <div className={styles.inputGroup}>
             <input type="text" name="name" id="" required onChange={handleChange} value={data.name} />
