@@ -51,7 +51,7 @@ const Contact = () => {
         text: "mensaje enviado correctamente",
         type: "success",
         customClass:{popup:styles.alert}
-        
+
       });
       const responseData = await response.json();
       console.log(responseData);
@@ -112,7 +112,7 @@ const Contact = () => {
             <label htmlFor="">mensaje</label>
           </div>
           <button className={styles.buttons} type="submit">
-            Enviar
+            Enviar mensaje
           </button>
         </form>
       </div>
