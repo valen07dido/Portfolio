@@ -30,15 +30,7 @@
   margin: 10px;
 }
 
-.link:hover {
-  transform: scale(1.2);
-  transform: rotateZ(360deg);
-}
 
-.icon {
-  font-size: 1.5em;
-  margin-right: 10px;
-}
 
 .name {
   font-size: 1.2em;
@@ -76,7 +68,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px 0;
+  padding: 10px 10px;
   font-size: 16px;
   color: #5a5a5a;
   transition: 0.3s;

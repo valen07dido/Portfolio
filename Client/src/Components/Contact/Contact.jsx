@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 import swal from "sweetalert2";
 const url = import.meta.env.VITE_URL_BACKEND;
 const Contact = () => {
+  console.log(url)
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -34,9 +35,11 @@ const Contact = () => {
         },
         body: JSON.stringify(data),
       });
+      console.log(response)
 
       if (!response.ok) {
         throw new Error("Error al enviar el formulario");
+        
       }
 
       setData({
