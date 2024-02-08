@@ -2,6 +2,8 @@ require("dotenv").config();
 const { EMAIL, PASSWORD, EMAIL_RECEIVER,URL_FRONTEND } = process.env;
 const express = require("express");
 const bodyParser = require("body-parser");
+const morgan = require("morgan");
+
 const nodemailer = require("nodemailer");
 var cors = require("cors");
 
@@ -9,7 +11,14 @@ const app = express();
 
 app.use(cors({ credentials: true, origin: `${URL_FRONTEND}` }));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(morgan("dev"));
 app.use(bodyParser.json());
+app.use((err, req, res, next) => {
+  const status = err.status || 500;
+  const message = err.message || err;
+  console.error(err);
+  res.status(status).send(message);
+});
 
 app.post("/send", (req, res) => {
   const output = `

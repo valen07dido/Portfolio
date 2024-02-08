@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import swal from "sweetalert2";
+const url = import.meta.env.VITE_URL_BACKEND;
 const Contact = () => {
   const [data, setData] = useState({
     name: "",
@@ -8,7 +9,6 @@ const Contact = () => {
     affair: "",
     message: "",
   });
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData((prevData) => ({ ...prevData, [name]: value }));
@@ -21,13 +21,13 @@ const Contact = () => {
         text: "estamos enviando su mensaje.",
         type: "info",
         showConfirmButton: false,
-        closeOnClickOutside: false,
+        didClose: false,
         closeOnEsc: false,
-        customClass:{popup:styles.alert}
+        customClass: { popup: styles.alert },
       });
       swal.showLoading();
 
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch(`${url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const Contact = () => {
       if (!response.ok) {
         throw new Error("Error al enviar el formulario");
       }
-      
+
       setData({
         name: "",
         email: "",
@@ -50,8 +50,7 @@ const Contact = () => {
         title: "Exito!!",
         text: "mensaje enviado correctamente",
         type: "success",
-        customClass:{popup:styles.alert}
-
+        customClass: { popup: styles.alert },
       });
       const responseData = await response.json();
       console.log(responseData);
@@ -102,14 +101,15 @@ const Contact = () => {
           <div className={styles.inputGroup}>
             <textarea
               name="message"
+              placeholder="Ingrese su mensaje aqui..."
               id=""
-              cols="77"
+              cols="100%"
               rows="10"
               required
               onChange={handleChange}
               value={data.message}
-            ></textarea>
-            <label htmlFor="">mensaje</label>
+              className={styles.message}
+              ></textarea>
           </div>
           <button className={styles.buttons} type="submit">
             Enviar mensaje
