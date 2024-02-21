@@ -1,56 +1,58 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./NavBar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ home, about, contact, projects, footer }) => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [navbarOpacity, setNavbarOpacity] = useState(1);
 
   const handleClick = () => {
     setOpen(!open);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        setNavbarOpacity(0);
+      } else {
+        setNavbarOpacity(1);
+      }
+      setLastScrollTop(scrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
-    <div className={styles.header}>
-      <Link to="/" className={styles.home}>
+    <div className={styles.header} style={{ opacity: navbarOpacity, transition: 'opacity 0.5s' }}>
+      <div className={styles.home} onClick={home}>
         <h1>Portfolio</h1>
-      </Link>
-      <div className={open?styles.active:styles.contain}>
-        <Link to="/" className={styles.links}>
-          <button
-            className={pathname === "/" ? styles.ButtonIn : styles.buttons}
-          >
-            Inicio
-          </button>
-        </Link>
-        <Link to="/about" className={styles.links}>
-          <button
-            className={pathname === "/about" ? styles.ButtonIn : styles.buttons}
-          >
-            Sobre mi
-          </button>
-        </Link>
-        <Link to="/contact" className={styles.links}>
-          <button
-            className={
-              pathname === "/contact" ? styles.ButtonIn : styles.buttons
-            }
-          >
-            Contacto
-          </button>
-        </Link>
-        <Link to="/projects" className={styles.links}>
-          <button
-            className={
-              pathname === "/projects" ? styles.ButtonIn : styles.buttons
-            }
-          >
-            Proyectos
-          </button>
-        </Link>
       </div>
-      
-      <div onClick={()=>handleClick()}>
+      <div className={open ? styles.active : styles.contain}>
+        <div className={styles.links} onClick={home}>
+          <button className={styles.buttons}>Inicio</button>
+        </div>
+        <div className={styles.links} onClick={about}>
+          <button className={styles.buttons}>Sobre mi</button>
+        </div>
+        <div className={styles.links} onClick={contact}>
+          <button className={styles.buttons}>Contacto</button>
+        </div>
+        <div className={styles.links} onClick={projects}>
+          <button className={styles.buttons}>Proyectos</button>
+        </div>
+        <div className={styles.links} onClick={footer}>
+          <button className={styles.buttons}>Redes Sociales</button>
+        </div>
+      </div>
+
+      <div onClick={() => handleClick()}>
         {open ? (
           <FaTimes
             className={styles.hamburger}

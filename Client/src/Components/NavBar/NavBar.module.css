@@ -1,8 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  position: fixed;
+  padding: 10px;
+  background-color: #00000059;
+  top:0 ;
+
+  width: 100%;
+  z-index: 1000;
 }
 .contain {
   display: flex;
@@ -33,6 +38,8 @@
 }
 .home {
   text-decoration: none;
+  cursor: pointer;
+  margin: 20px;
 }
 
 @media screen and (max-width: 1040px) {
