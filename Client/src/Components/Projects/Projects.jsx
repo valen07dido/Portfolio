@@ -9,19 +9,19 @@ const Projects = () => {
       name: "pi pokemon",
       image: pokeapi,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus efficitur mauris, id pretium nisi aliquam eu. Suspendisse egestas magna a pulvinar porta. Vestibulum facilisis libero elit, et pulvinar sem facilisis a. Etiam malesuada tempor aliquet. Quisque rutrum scelerisque tempus. Pellentesque elit leo, dictum sit amet magna ornare, pulvinar venenatis mi. Ut et posuere leo. Mauris in sapien tristique, convallis magna in, blandit nunc. Aenean lacinia eros ut dictum lobortis.",
+        "el proyecto de pokemon se consume de una API ademas de unificar los datos de la API a la base de datos y poder crear nuevos personajes, el proyecto tiene busqueda por filtros. detalle de personaje con caracteristicas y un apartado para crear personajes, la navegacion por la pagina es muy sencilla e intuitiva para brindarle al cliente el confort al navegar",
     },
     {
       name: "rick and morty",
       image: rickAndMorty,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus efficitur mauris, id pretium nisi aliquam eu. Suspendisse egestas magna a pulvinar porta. Vestibulum facilisis libero elit, et pulvinar sem facilisis a. Etiam malesuada tempor aliquet. Quisque rutrum scelerisque tempus. Pellentesque elit leo, dictum sit amet magna ornare, pulvinar venenatis mi. Ut et posuere leo. Mauris in sapien tristique, convallis magna in, blandit nunc. Aenean lacinia eros ut dictum lobortis.",
+        "El proyecto de Rick And Morty fue mi primer proyecto utilizando react para el Front-end y Express para el Back-end. el mismo se basa en una app donde vas buscando distintos personajes de la serie y los va mostrando en el home. la app maneja inicio de sesion, apartado de favoritos y filtrado de los mismos.",
     },
     {
       name: "hyper mega red",
       image: hyperMegaRed,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus efficitur mauris, id pretium nisi aliquam eu. Suspendisse egestas magna a pulvinar porta. Vestibulum facilisis libero elit, et pulvinar sem facilisis a. Etiam malesuada tempor aliquet. Quisque rutrum scelerisque tempus. Pellentesque elit leo, dictum sit amet magna ornare, pulvinar venenatis mi. Ut et posuere leo. Mauris in sapien tristique, convallis magna in, blandit nunc. Aenean lacinia eros ut dictum lobortis.",
+        "La temática es un e-commerce con el control de stock y creación de los productos por parte del administrador. Además de eso, también tiene el ingreso y seguimiento de reparaciones a servicio técnico para los 3 perfiles (administrador, técnico y cliente), todo esto notificado mediante mail y/o whatsapp. Además, tiene estadísticas para que el administrador pueda informarse de todos los eventos producidos en la aplicación, entre otras funcionalidades que destacan de cualquier e-commerce corriente.",
     },
   ];
   return (
