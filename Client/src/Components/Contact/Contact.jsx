@@ -72,34 +72,34 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              id=""
+              id="name"
               required
               onChange={handleChange}
               value={data.name}
             />
-            <label htmlFor="">nombre</label>
+            <label htmlFor="name">nombre</label>
           </div>
           <div className={styles.inputGroup}>
             <input
               type="text"
               name="email"
-              id=""
+              id="email"
               required
               onChange={handleChange}
               value={data.email}
             />
-            <label htmlFor="">email</label>
+            <label htmlFor="email">email</label>
           </div>
           <div className={styles.inputGroup}>
             <input
               type="text"
               name="affair"
-              id=""
+              id="affair"
               required
               onChange={handleChange}
               value={data.affair}
             />
-            <label htmlFor="">Asunto</label>
+            <label htmlFor="affair">Asunto</label>
           </div>
           <div className={styles.inputGroup}>
             <textarea
