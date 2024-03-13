@@ -2,7 +2,7 @@ require("dotenv").config();
 const {URL_FRONTEND } = process.env;
 const express = require("express");
 const bodyParser = require("body-parser");
-const postMessage =require('./src/Handlers/Handler')
+const {PostMessage,getProjects} =require('./src/Handlers/Handler')
 const morgan = require("morgan");
 var cors = require("cors");
 
@@ -18,7 +18,8 @@ app.use((err, req, res, next) => {
   res.status(status).send(message);
 });
 
-app.post("/send", postMessage )
+app.post("/send", PostMessage )
+app.get('/projects',getProjects)
 
 app.get('/test', (req, res) => {
   res.send('Test route is working');
