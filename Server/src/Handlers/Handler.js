@@ -45,18 +45,21 @@ const getProjects = (req, res) => {
     {
       name: "pi pokemon",
       image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1710290096/portfolio/apoxelwmjqrcezzjkkp1.gif',
+      url:"https://front-pokemon-iota.vercel.app/",
       description:
         "el proyecto de pokemon se consume de una API ademas de unificar los datos de la API a la base de datos y poder crear nuevos personajes, el proyecto tiene busqueda por filtros. detalle de personaje con caracteristicas y un apartado para crear personajes, la navegacion por la pagina es muy sencilla e intuitiva para brindarle al cliente el confort al navegar",
     },
     {
       name: "rick and morty",
       image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1710290096/portfolio/ygkhu0lrjoqmzygbpu9x.gif',
+      url:"https://rick-and-morty-ashy-chi.vercel.app/",
       description:
         "El proyecto de Rick And Morty fue mi primer proyecto utilizando react para el Front-end y Express para el Back-end. el mismo se basa en una app donde vas buscando distintos personajes de la serie y los va mostrando en el home. la app maneja inicio de sesion, apartado de favoritos y filtrado de los mismos.",
     },
     {
       name: "hyper mega red",
       image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1710290095/portfolio/gwougo0pz1jbobnexmad.svg',
+      url:"https://pf-henry-sepia.vercel.app/",
       description:
         "La temática es un e-commerce con el control de stock y creación de los productos por parte del administrador. Además de eso, también tiene el ingreso y seguimiento de reparaciones a servicio técnico para los 3 perfiles (administrador, técnico y cliente), todo esto notificado mediante mail y/o whatsapp. Además, tiene estadísticas para que el administrador pueda informarse de todos los eventos producidos en la aplicación, entre otras funcionalidades que destacan de cualquier e-commerce corriente.",
     },

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Projects.module.css";
-
+import { FaExternalLinkAlt } from "react-icons/fa";
 const Projects = () => {
   const [project, setProject] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -51,8 +51,10 @@ const Projects = () => {
               <h1>{selectedProject.name}</h1>
               <img src={selectedProject.image} alt={selectedProject.name} />
             </div>
-
             <p className={styles.content}>{selectedProject.description}</p>
+            <a href={selectedProject.url}>
+              <FaExternalLinkAlt className={styles.icon} /><p>ir al sitio web</p>
+            </a>
           </div>
           <button onClick={handleClose}>Cerrar</button>
         </div>
