@@ -13,7 +13,8 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         setNavbarOpacity(0);
       } else {
@@ -22,15 +23,18 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
       setLastScrollTop(scrollTop);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
 
   return (
-    <div className={styles.header} style={{ opacity: navbarOpacity, transition: 'opacity 0.5s' }}>
+    <div
+      className={styles.header}
+      style={{ opacity: navbarOpacity, transition: "opacity 0.5s" }}
+    >
       <div className={styles.home} onClick={home}>
         <h1>Portfolio</h1>
       </div>
@@ -41,11 +45,11 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
         <div className={styles.links} onClick={about}>
           <button className={styles.buttons}>Sobre mi</button>
         </div>
-        <div className={styles.links} onClick={contact}>
-          <button className={styles.buttons}>Contacto</button>
-        </div>
         <div className={styles.links} onClick={projects}>
           <button className={styles.buttons}>Proyectos</button>
+        </div>
+        <div className={styles.links} onClick={contact}>
+          <button className={styles.buttons}>Contacto</button>
         </div>
         <div className={styles.links} onClick={footer}>
           <button className={styles.buttons}>Redes Sociales</button>
