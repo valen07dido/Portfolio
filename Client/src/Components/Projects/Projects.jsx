@@ -49,7 +49,7 @@ const Projects = () => {
           <div className={styles.popup}>
             <div>
               <h1>{selectedProject.name}</h1>
-              <img src={selectedProject.image} alt={selectedProject.name} />
+              <img src={selectedProject.image} alt={selectedProject.name} className={styles.modalImg} />
             </div>
             <p className={styles.content}>{selectedProject.description}</p>
             <a href={selectedProject.url}>
