@@ -31,14 +31,14 @@ function App() {
       <div ref={homeRef} className={styles.box}>
         <Home />
       </div>
-      <div ref={contactRef} className={styles.box}>
-        <Contact />
-      </div>
       <div ref={aboutRef} className={styles.box}>
         <About />
       </div>
       <div ref={projectsRef} className={styles.box}>
         <Projects />
+      </div>
+      <div ref={contactRef} className={styles.box}>
+        <Contact />
       </div>
       <div ref={footerRef} className={styles.box}>
         <Footer />

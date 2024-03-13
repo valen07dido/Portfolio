@@ -30,7 +30,7 @@ const Footer = () => {
         <h2 className={styles.title}>Redes sociales:</h2>
         <div className={styles.containerNet}>
           {redes.map((red) => (
-            <div className={styles.network}>
+            <div className={styles.network} key={red.name}>
               <a href={red.url} className={styles.link}>
                 {red.icon}
               </a>
