@@ -47,16 +47,24 @@ const Projects = () => {
       {selectedProject && (
         <div className={styles.modal}>
           <div className={styles.popup}>
-            <div>
-              <h1>{selectedProject.name}</h1>
-              <img src={selectedProject.image} alt={selectedProject.name} className={styles.modalImg} />
+            <div className={styles.container1}>
+              <div>
+                <h1>{selectedProject.name}</h1>
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.name}
+                  className={styles.modalImg}
+                />
+              </div>
+              <div className={styles.links}>
+                <a href={selectedProject.url}>
+                  <FaExternalLinkAlt className={styles.icon} />
+                </a>
+              </div>
             </div>
             <p className={styles.content}>{selectedProject.description}</p>
-            <a href={selectedProject.url}>
-              <FaExternalLinkAlt className={styles.icon} /><p>ir al sitio web</p>
-            </a>
           </div>
-          <button onClick={handleClose}>Cerrar</button>
+          <button onClick={handleClose}>X</button>
         </div>
       )}
     </div>
