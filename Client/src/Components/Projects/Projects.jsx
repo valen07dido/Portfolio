@@ -46,7 +46,7 @@ const Projects = () => {
 
       {selectedProject && (
         <div className={styles.modal}>
-                <button onClick={handleClose}>X</button>
+                <button onClick={handleClose} className={styles.button}>X</button>
           <div className={styles.popup}>
             <div className={styles.container1}>
               <div className={styles.header}>

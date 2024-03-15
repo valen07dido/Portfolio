@@ -126,12 +126,13 @@
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 75%;
     height: 90%;
     text-align: center;
     padding: 20px; 
     background: rgba(255, 255, 255, 0.639); 
     border-radius: 10px; 
+    position: absolute; 
 }
 
 .icon{
@@ -165,10 +166,14 @@
     justify-content: center; 
 }
 
-button {
+.button {
+    margin:0 0 45% 80%;
     background-color: black; 
     border: solid 2px white;
     border-radius: 10px;
+    width: 50px;
+    cursor: pointer;
+    height: 50px; 
     font-size: 2em; 
     color: white; 
     transition: 0.5s;
