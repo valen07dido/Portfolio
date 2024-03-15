@@ -156,14 +156,15 @@
 
 .links{
     width:200px;
-    height: 80px;
+    max-height:400px;
+    margin-bottom: -10px;
     background-color:  rgba(0, 0, 0, 0.841);
     color: black;
     text-align: center;
     align-items: start;
     display: flex; 
     flex-direction: column;
-    justify-content: center; 
+    justify-content: space-around; 
 }
 
 .button {
