@@ -81,7 +81,6 @@
     display: flex;
     justify-content: space-evenly; 
     flex-wrap: wrap; 
-    cursor: pointer;
 }
 
 .card{
@@ -114,7 +113,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad */
+    background: rgba(0, 0, 0, 0.8); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,11 +126,12 @@
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+    width: 80%;
+    height: 90%;
     text-align: center;
     padding: 20px; 
-    background: rgba(255, 255, 255, 0.9); /* Agrega un fondo claro con opacidad */
-    border-radius: 10px; /* Agrega bordes redondeados */
-    position: relative; /* Para posicionar el botón de cierre */
+    background: rgba(255, 255, 255, 0.639); 
+    border-radius: 10px; 
 }
 
 .icon{
@@ -146,29 +146,38 @@
 }
 
 .container1{
-    width: 25%;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    margin: 10px;
+    justify-content: space-around;
     align-items: center;
 }
 
 .links{
-    width: 80px;
+    width:200px;
     height: 80px;
-    background-color: rgb(34, 34, 34);
+    background-color:  rgba(0, 0, 0, 0.841);
     color: black;
     text-align: center;
-    align-items: center;
-    display: flex; /* Para centrar el icono */
-    justify-content: center; /* Para centrar el icono */
+    align-items: start;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
 }
 
 button {
-    position: absolute; /* Posiciona el botón de cierre */
-    top: 10px; /* Posiciona el botón de cierre */
-    right: 10px; /* Posiciona el botón de cierre */
-    background: none; /* Remueve el fondo */
-    border: none; /* Remueve el borde */
-    font-size: 2em; /* Aumenta el tamaño */
-    color: white; /* Cambia el color a blanco */
+    background-color: black; 
+    border: solid 2px white;
+    border-radius: 10px;
+    font-size: 2em; 
+    color: white; 
+    transition: 0.5s;
+&:hover{
+    background-color: white;
+    color: black;
+}
+}
+
+.url{
+    color: white;
 }
