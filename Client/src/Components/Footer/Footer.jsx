@@ -39,13 +39,11 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div>
-        <h2 className={styles.title}>Redes sociales:</h2>
         <div className={styles.containerNet}>
           {renderSocialNetworks()}
         </div>
       </div>
       <div>
-        <h2 className={styles.title}>Ubicación:</h2>
         <a href="https://maps.app.goo.gl/4KGVPtLEeRDfnsrZ9" className={styles.link}>
           <FaMapMarkerAlt /> Alvear, Santa Fe, Argentina
         </a>

@@ -1,189 +1,132 @@
-/* .container{
+.container {
     margin-top: 100px;
     display: flex;
-    justify-content: space-evenly; 
-    flex-wrap: wrap; 
-    cursor: pointer;
-}
-
-.card{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px; 
+  }
+  
+  .card {
     width: 300px;
     align-items: center;
     text-align: center;
-    border: solid 2px white;
+    border: solid 2px white;    
     border-radius: 10px;
     transition: 0.5s;
-    margin-bottom: 20px;
-}
 
-.image{
+    margin-bottom: 20px;
+    padding: 10px; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .image {
     width: 280px;
     height: 280px;
-    object-fit: cover; 
-}
-
-.content {
-    width: 80%; 
+    object-fit: cover;
+    border-radius: 10px; 
+  }
+  
+  .content {
+    width: 80%;
     color: white;
     font-size: large;
     background-color: rgba(0, 0, 0, 0.841);
     padding: 10px;
-}
-
-.modal{
+    line-height: 1.5; 
+  }
+  
+  .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: +10;
-}
-
-.popup{
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 20px; 
-}
-
-.icon{
-    color: rgb(255, 252, 252);
-    margin-right: 5px; 
-}
-
-.modalImg{
-    width: 100%; 
-    max-height: 400px; 
-    object-fit: cover; 
-}
-.container1{
-    width: 25%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.links{
-    width: 80px;
-    height: 150px;
-    background-color: rgb(34, 34, 34);
-    color: black;
-} */
-
-.container{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-evenly; 
-    flex-wrap: wrap; 
-}
-
-.card{
-    width: 300px;
-    align-items: center;
-    text-align: center;
-    border: solid 2px white;
-    border-radius: 10px;
-    transition: 0.5s;
-    margin-bottom: 20px;
-}
-
-.image{
-    width: 280px;
-    height: 280px;
-    object-fit: cover; 
-}
-
-.content {
-    width: 80%; 
-    color: white;
-    font-size: large;
-    background-color: rgba(0, 0, 0, 0.841);
-    padding: 10px;
-}
-
-.modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); 
+  }
+  
+  .popup {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: +10;
-}
-
-.popup{
-    display: flex;
-    flex-direction: column; 
     justify-content: center;
     align-items: center;
     width: 75%;
     height: 90%;
     text-align: center;
-    padding: 20px; 
-    background: rgba(255, 255, 255, 0.639); 
-    border-radius: 10px; 
-    position: absolute; 
-}
-
-.icon{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.639);
+    border-radius: 10px;
+    position: absolute;
+    overflow-y: auto; 
+  }
+  
+  .icon {
     color: rgb(255, 252, 252);
-    margin-right: 5px; 
-}
-
-.modalImg{
-    width: 100%; 
-    max-height: 400px; 
-    object-fit: cover; 
-}
-
-.container1{
+    margin-right: 5px;
+  }
+  
+  .modalImg {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px; 
+  }
+  
+  .container1 {
     width: 60%;
     display: flex;
     margin: 10px;
     justify-content: space-around;
     align-items: center;
-}
-
-.links{
-    width:200px;
-    max-height:400px;
+  }
+  
+  .links {
+    width: 200px;
+    max-height: 400px;
     margin-bottom: -10px;
-    background-color:  rgba(0, 0, 0, 0.841);
+    background-color: rgba(0, 0, 0, 0.841);
     color: black;
     text-align: center;
     align-items: start;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    justify-content: space-around; 
-}
-
-.button {
-    margin:0 0 45% 80%;
-    background-color: black; 
+    justify-content: space-around;
+  }
+  
+  .button {
+    margin: 0 0 45% 80%;
+    background-color: black;
     border: solid 2px white;
-    border-radius: 10px;
+    border-radius: 50%; 
     width: 50px;
     cursor: pointer;
-    height: 50px; 
-    font-size: 2em; 
-    color: white; 
-    transition: 0.5s;
-&:hover{
-    background-color: white;
-    color: black;
-}
-}
-
-.url{
+    height: 50px;
+    font-size: 2em;
     color: white;
-}
+    transition: 0.5s;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+  
+  .url {
+    color: white;
+    text-decoration: none; 
+  }
+  
+  .titles {
+    color: white;
+    margin-left: 40px;
+    font-size: 2em; 
+    margin-bottom: -40px;
+  }
+  .containerGlobal{
+    padding-top:70px;
+  }
+  
