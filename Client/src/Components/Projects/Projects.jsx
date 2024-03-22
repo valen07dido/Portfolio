@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Projects.module.css";
+const url = import.meta.env.VITE_URL_BACKEND;
 import { FaExternalLinkAlt } from "react-icons/fa";
 const Projects = () => {
   const [project, setProject] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    fetch("https://portfolio-lu4r.onrender.com/projects")
+    fetch(`${url}/projects`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
