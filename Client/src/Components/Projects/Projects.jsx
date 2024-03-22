@@ -6,7 +6,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/projects")
+    fetch("https://portfolio-lu4r.onrender.com/projects")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
