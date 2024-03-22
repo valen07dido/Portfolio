@@ -1,6 +1,6 @@
 .titles{
     color: white;
-    margin: 20px;
+    margin-bottom: 40px;
 }
 .content{
     color: white;
@@ -18,3 +18,18 @@
     text-align: center;
     align-items: center;
 }
+.contentContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 85%;
+  }
+  
+.image {
+    border: solid 3px white;
+    padding: 10px;
+    border-radius: 50px;
+    width: 350px;
+    height: auto;
+  }

@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Carousel.module.css";
 
 const Carousel = ({ items }) => {
+    const [isDragging, setIsDragging] = useState(false);
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 2,
-        autoplay: true, /* Habilita el giro automático */
-        autoplaySpeed: 2000, /* Configura la velocidad del giro automático (en milisegundos) */
+        autoplay: true,
+        autoplaySpeed: 2000,
+        beforeChange: () => setIsDragging(true),
+        afterChange: () => setIsDragging(false)
     };
   return (
-    <Slider {...settings} className={styles.slider}>
+    <Slider {...settings} className={`${styles.slider} ${isDragging ? 'grabbing' : ''}`}>
       {items.map((item, index) => (
         <div key={index} className={styles.container}>
           <img

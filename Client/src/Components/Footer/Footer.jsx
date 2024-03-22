@@ -1,5 +1,11 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -20,9 +26,9 @@ const Footer = () => {
       icon: <FaEnvelope />,
     },
     {
-      name: "\u00A0Teléfono",
-      url: "tel:+5493413164761",
-      icon: <FaPhone />,
+      name: "\u00A0WhatsApp",
+      url: "https://wa.me/qr/PQWLKZL75T4OF1",
+      icon: <FaWhatsapp  className={styles.FaWhatsapp}/>,
     },
   ];
 
@@ -30,7 +36,8 @@ const Footer = () => {
     return socialNetworks.map((network) => (
       <div className={styles.network} key={network.name}>
         <a href={network.url} className={styles.link}>
-          {network.icon}{network.name}
+          {network.icon}
+          {network.name}
         </a>
       </div>
     ));
@@ -39,14 +46,13 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div>
-        <h2 className={styles.title}>Redes sociales:</h2>
-        <div className={styles.containerNet}>
-          {renderSocialNetworks()}
-        </div>
+        <div className={styles.containerNet}>{renderSocialNetworks()}</div>
       </div>
       <div>
-        <h2 className={styles.title}>Ubicación:</h2>
-        <a href="https://maps.app.goo.gl/4KGVPtLEeRDfnsrZ9" className={styles.link}>
+        <a
+          href="https://maps.app.goo.gl/4KGVPtLEeRDfnsrZ9"
+          className={styles.link}
+        >
           <FaMapMarkerAlt /> Alvear, Santa Fe, Argentina
         </a>
       </div>
