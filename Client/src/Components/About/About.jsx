@@ -9,7 +9,7 @@ const About = () => {
       image: "https://res.cloudinary.com/dpa8t14c2/image/upload/v1711134823/portfolio/dwj7peic6svqkowg5tc5.jpg",
     },
     {
-      text: " Mi viaje en el mundo de la programación comenzó cuando descubrí la vastedad y la profundidad que este campo tenía para ofrecer. La posibilidad de plasmar mi creatividad 🎨 en soluciones funcionales y la oportunidad de resolver problemas complejos me fascinaron desde el principio. Esta fascinación se ha convertido en una fuente constante de motivación que me impulsa a seguir creciendo y desarrollándome en mi carrera profesional.",
+      text: "Mi viaje en el mundo de la programación comenzó cuando descubrí la vastedad y la profundidad que este campo tenía para ofrecer. La posibilidad de plasmar mi creatividad 🎨 en soluciones funcionales y la oportunidad de resolver problemas complejos me fascinaron desde el principio. Esta fascinación se ha convertido en una fuente constante de motivación que me impulsa a seguir creciendo y desarrollándome en mi carrera profesional.",
       image: "https://res.cloudinary.com/dpa8t14c2/image/upload/v1711134824/portfolio/zm02tpi55swnzsjxgavk.jpg",
     },
     {
@@ -17,7 +17,7 @@ const About = () => {
       image: "https://res.cloudinary.com/dpa8t14c2/image/upload/v1711134824/portfolio/surqpttp51n9fkdryf4v.jpg",
     },
     {
-      text: " Además de mi pasión por la programación, también valoro la colaboración y el trabajo en equipo 👥. Creo firmemente que las mejores soluciones surgen de la combinación de diversas perspectivas y habilidades. Por lo tanto, siempre estoy dispuesto a colaborar con otros, aprender de ellos y aportar mis propias ideas y experiencias.",
+      text: "Además de mi pasión por la programación, también valoro la colaboración y el trabajo en equipo 👥. Creo firmemente que las mejores soluciones surgen de la combinación de diversas perspectivas y habilidades. Por lo tanto, siempre estoy dispuesto a colaborar con otros, aprender de ellos y aportar mis propias ideas y experiencias.",
       image: "https://res.cloudinary.com/dpa8t14c2/image/upload/v1711134824/portfolio/bgbtddf6e4ryatkjwjc5.jpg",
     },
     {
