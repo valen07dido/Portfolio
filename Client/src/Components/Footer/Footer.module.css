@@ -36,3 +36,6 @@
   flex-direction: column; /* Stack sections vertically */
   align-items: center; /* Center sections horizontally */
 }
+.FaWhatsapp{
+  font-size: 35px;
+}
