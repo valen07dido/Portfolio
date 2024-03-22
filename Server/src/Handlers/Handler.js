@@ -44,7 +44,7 @@ const getProjects = (req, res) => {
   const projects = [
     {
       name: "pi pokemon",
-      image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1710294578/portfolio/oc5xxhyfyrlszwsssmlp.png',
+      image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1711067700/portfolio/kzeokyqejpc8pvxm9vok.png',
       url:"https://front-pokemon-iota.vercel.app/",
       repository:"",
       description:
@@ -52,7 +52,7 @@ const getProjects = (req, res) => {
     },
     {
       name: "rick and morty",
-      image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1710290096/portfolio/ygkhu0lrjoqmzygbpu9x.gif',
+      image: 'https://res.cloudinary.com/dpa8t14c2/image/upload/v1711067701/portfolio/cokifbk6euzce9wr9sxw.png',
       url:"https://rick-and-morty-ashy-chi.vercel.app/",
       repository:"",
       description:
