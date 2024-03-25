@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import swal from "sweetalert2";
+import validations from "./validations";
 const url = import.meta.env.VITE_URL_BACKEND;
 const Contact = () => {
   console.log(url)
@@ -10,9 +11,13 @@ const Contact = () => {
     affair: "",
     message: "",
   });
+  const [errors, setErrors]=useState({})
+  console.log(errors)
   const handleChange = (event) => {
     const { name, value } = event.target;
     setData((prevData) => ({ ...prevData, [name]: value }));
+    setErrors(validations(data))
+
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -77,7 +82,7 @@ const Contact = () => {
               onChange={handleChange}
               value={data.name}
             />
-            <label htmlFor="name">nombre</label>
+            <label htmlFor="name">Nombre</label>
           </div>
           <div className={styles.inputGroup}>
             <input
@@ -88,7 +93,7 @@ const Contact = () => {
               onChange={handleChange}
               value={data.email}
             />
-            <label htmlFor="email">email</label>
+            <label htmlFor="email">Email</label>
           </div>
           <div className={styles.inputGroup}>
             <input

@@ -57,9 +57,10 @@
 
 .inputGroup input {
   width: 100%;
-  padding: 10px 0;
+  border-radius: 10px;
   font-size: large;
   color: #5a5a5a;
+  padding: 10px;
   border: none;
   border-bottom: 1px solid #5a5a5a;
 }
@@ -69,17 +70,17 @@
   top: 0;
   left: 0;
   padding: 10px 10px;
-  font-size: 16px;
+  font-size: 18px;
   color: #5a5a5a;
   transition: 0.3s;
 }
 
 .inputGroup input:focus ~ label,
 .inputGroup input:valid ~ label {
-  top: -30px;
+  top: -35px;
   left: 0;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 19px;
 }
 .form{
   width: 600px;
@@ -110,5 +111,7 @@
 }
 .message{
   width: 100%;
-  font-size: large;
+  padding: 10px;
+  font-size: 19px;
+  border-radius: 10px;
 }
