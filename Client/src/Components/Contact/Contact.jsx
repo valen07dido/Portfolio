@@ -4,7 +4,6 @@ import swal from "sweetalert2";
 import validations from "./validations";
 const url = import.meta.env.VITE_URL_BACKEND;
 const Contact = () => {
-  console.log(url);
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -39,7 +38,6 @@ const Contact = () => {
         },
         body: JSON.stringify(data),
       });
-      console.log(response);
 
       if (!response.ok) {
         throw new Error("Error al enviar el formulario");
@@ -59,13 +57,11 @@ const Contact = () => {
         customClass: { popup: styles.alert },
       });
       const responseData = await response.json();
-      console.log(responseData);
     } catch (error) {
       console.error(error);
     }
   };
 
-  console.log(data);
   return (
     <div className={styles.container}>
       <div>

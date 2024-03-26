@@ -10,7 +10,6 @@ const Projects = () => {
     fetch(`${url}/projects`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setProject(data);
       })
       .catch((error) => console.log(error.message));
