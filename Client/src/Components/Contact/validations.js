@@ -12,8 +12,8 @@ if(!email||email.length===0){
 }
 if(!affair||affair.length===0){
     errors.e3="El asunto es obligatorio."
-}else if(affair.length>15){
-    errors.e3="El asunto puede tener hasta 15 caracteres."
+}else if(affair.length>25){
+    errors.e3="El asunto puede tener hasta 25 caracteres."
 }
 if(!message||message.length===0){
     errors.e4="El mensaje es obligatorio."

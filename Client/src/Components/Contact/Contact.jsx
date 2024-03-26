@@ -80,7 +80,7 @@ const Contact = () => {
               value={data.name}
             />
             <label htmlFor="name">Nombre</label>
-            {errors.e1 && <p>{errors.e1}</p>}
+            {errors.e1 &&  <p className={styles.error}>*{errors.e1}*</p>}
           </div>
           <div
             className={errors.e2 ? styles.inputGroupError : styles.inputGroup}
@@ -94,7 +94,7 @@ const Contact = () => {
               value={data.email}
             />
             <label htmlFor="email">Email</label>
-            {errors.e2 && <p>{errors.e2}</p>}
+            {errors.e2 &&  <p className={styles.error}>*{errors.e2}*</p>}
           </div>
           <div
             className={errors.e3 ? styles.inputGroupError : styles.inputGroup}
@@ -108,7 +108,7 @@ const Contact = () => {
               value={data.affair}
             />
             <label htmlFor="affair">Asunto</label>
-            {errors.e3 && <p>{errors.e3}</p>}
+            {errors.e3 &&  <p className={styles.error}>*{errors.e3}*</p>}
           </div>
           <div
             className={errors.e4 ? styles.inputGroupError : styles.inputGroup}
@@ -124,7 +124,7 @@ const Contact = () => {
               value={data.message}
               className={errors.e4?styles.messageError:styles.message}
             ></textarea>
-            {errors.e4 && <p>{errors.e4}</p>}
+            {errors.e4 && <p className={styles.error}>*{errors.e4}*</p>}
           </div>
           <button className={styles.buttons} type="submit">
             Enviar mensaje
