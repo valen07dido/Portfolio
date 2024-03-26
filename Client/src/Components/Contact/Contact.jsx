@@ -13,10 +13,11 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setData((prevData) => ({ ...prevData, [name]: value }));
-    setErrors(validations(data));
+    const newData = { ...data, [name]: value };
+    setData(newData);
+    setErrors(validations(newData));
   };
-  console.log(errors);
+  console.log(Object.keys(errors).length);
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -67,7 +68,9 @@ const Contact = () => {
       <div>
         <form className={styles.form} onSubmit={handleSubmit}>
           <h1>Contactame</h1>
-          <div className={styles.inputGroup}>
+          <div
+            className={errors.e1 ? styles.inputGroupError : styles.inputGroup}
+          >
             <input
               type="text"
               name="name"
@@ -79,7 +82,9 @@ const Contact = () => {
             <label htmlFor="name">Nombre</label>
             {errors.e1 && <p>{errors.e1}</p>}
           </div>
-          <div className={styles.inputGroup}>
+          <div
+            className={errors.e2 ? styles.inputGroupError : styles.inputGroup}
+          >
             <input
               type="text"
               name="email"
@@ -91,7 +96,9 @@ const Contact = () => {
             <label htmlFor="email">Email</label>
             {errors.e2 && <p>{errors.e2}</p>}
           </div>
-          <div className={styles.inputGroup}>
+          <div
+            className={errors.e3 ? styles.inputGroupError : styles.inputGroup}
+          >
             <input
               type="text"
               name="affair"
@@ -103,7 +110,9 @@ const Contact = () => {
             <label htmlFor="affair">Asunto</label>
             {errors.e3 && <p>{errors.e3}</p>}
           </div>
-          <div className={styles.inputGroup}>
+          <div
+            className={errors.e4 ? styles.inputGroupError : styles.inputGroup}
+          >
             <textarea
               name="message"
               placeholder="Ingrese su mensaje aqui..."
@@ -113,7 +122,7 @@ const Contact = () => {
               required
               onChange={handleChange}
               value={data.message}
-              className={styles.message}
+              className={errors.e4?styles.messageError:styles.message}
             ></textarea>
             {errors.e4 && <p>{errors.e4}</p>}
           </div>
