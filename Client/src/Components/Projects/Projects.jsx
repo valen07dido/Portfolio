@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Projects.module.css";
 const url = import.meta.env.VITE_URL_BACKEND;
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { BiWorld } from "react-icons/bi";
+import { FaExternalLinkAlt,FaGithub } from "react-icons/fa";
 const Projects = () => {
   const [project, setProject] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -63,11 +64,11 @@ const Projects = () => {
                 </div>
                 <div className={styles.links}>
                   <a href={selectedProject.url} className={styles.url}>
-                    <FaExternalLinkAlt className={styles.icon} /> visite el
+                    <BiWorld className={styles.icon} /> visite el
                     sitio web
                   </a>
                   <a href={selectedProject.url} className={styles.url}>
-                    <FaExternalLinkAlt className={styles.icon} /> visite el
+                    <FaGithub className={styles.icon} /> visite el
                     repositorio
                   </a>
                 </div>

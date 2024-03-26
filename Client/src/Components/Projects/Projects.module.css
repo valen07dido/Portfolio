@@ -61,7 +61,7 @@
     height: 90%;
     text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.639);
+    background: rgb(255, 255, 255);
     border-radius: 10px;
     position: absolute;
     overflow-y: auto; 
@@ -69,6 +69,7 @@
   
   .icon {
     color: rgb(255, 252, 252);
+    font-size: 30px;
     margin-right: 5px;
   }
   
@@ -80,28 +81,34 @@
   }
   
   .container1 {
-    width: 60%;
+    width: 80%;
     display: flex;
     margin: 10px;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: red;
     align-items: center;
   }
   
   .links {
-    width: 200px;
+    width: 450px;
+    height: 150px;
     max-height: 400px;
-    margin-bottom: -10px;
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    font-size: 19px;
     background-color: rgba(0, 0, 0, 0.841);
     color: black;
     text-align: center;
     align-items: start;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   
   .button {
-    margin: 0 0 45% 80%;
+    margin: 0 0 50% 85%;
     background-color: black;
     border: solid 2px white;
     border-radius: 50%; 
@@ -116,11 +123,14 @@
       color: black;
     }
   }
-  
   .url {
     color: white;
     text-decoration: none; 
-  }
+    text-align: center;
+    align-items: center; 
+    display: flex; 
+    justify-content: center; 
+}
   
   .titles {
     color: white;
