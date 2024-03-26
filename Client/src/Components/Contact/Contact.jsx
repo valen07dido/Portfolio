@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import swal from "sweetalert2";
 import validations from "./validations";
+import Swal from "sweetalert2";
 const url = import.meta.env.VITE_URL_BACKEND;
 const Contact = () => {
   const [data, setData] = useState({
@@ -17,14 +18,21 @@ const Contact = () => {
     setData(newData);
     setErrors(validations(newData));
   };
-  console.log(Object.keys(errors).length);
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (Object.keys(errors).length > 0) {
+      return Swal.fire({
+        title: "Por favor revise los datos",
+        text: "Verifique que no haya ningun error en los datos ingresados.",
+        icon: "warning",
+        customClass: { popup: styles.alert }
+      });
+    }
     try {
       swal.fire({
         title: "Por Favor espere.",
         text: "estamos enviando su mensaje.",
-        type: "info",
+        icon: "info",
         showConfirmButton: false,
         didClose: false,
         closeOnEsc: false,
@@ -54,7 +62,7 @@ const Contact = () => {
       swal.fire({
         title: "Exito!!",
         text: "mensaje enviado correctamente",
-        type: "success",
+        icon: "success",
         customClass: { popup: styles.alert },
       });
       const responseData = await response.json();
@@ -80,7 +88,7 @@ const Contact = () => {
               value={data.name}
             />
             <label htmlFor="name">Nombre</label>
-            {errors.e1 &&  <p className={styles.error}>*{errors.e1}*</p>}
+            {errors.e1 && <p className={styles.error}>*{errors.e1}*</p>}
           </div>
           <div
             className={errors.e2 ? styles.inputGroupError : styles.inputGroup}
@@ -94,7 +102,7 @@ const Contact = () => {
               value={data.email}
             />
             <label htmlFor="email">Email</label>
-            {errors.e2 &&  <p className={styles.error}>*{errors.e2}*</p>}
+            {errors.e2 && <p className={styles.error}>*{errors.e2}*</p>}
           </div>
           <div
             className={errors.e3 ? styles.inputGroupError : styles.inputGroup}
@@ -108,7 +116,7 @@ const Contact = () => {
               value={data.affair}
             />
             <label htmlFor="affair">Asunto</label>
-            {errors.e3 &&  <p className={styles.error}>*{errors.e3}*</p>}
+            {errors.e3 && <p className={styles.error}>*{errors.e3}*</p>}
           </div>
           <div
             className={errors.e4 ? styles.inputGroupError : styles.inputGroup}
@@ -122,7 +130,7 @@ const Contact = () => {
               required
               onChange={handleChange}
               value={data.message}
-              className={errors.e4?styles.messageError:styles.message}
+              className={errors.e4 ? styles.messageError : styles.message}
             ></textarea>
             {errors.e4 && <p className={styles.error}>*{errors.e4}*</p>}
           </div>
