@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./Projects.module.css";
 const url = import.meta.env.VITE_URL_BACKEND;
 import { BiWorld } from "react-icons/bi";
-import imgPrueba from "../../../public/logo-node.png"
-import { FaExternalLinkAlt,FaGithub } from "react-icons/fa";
+import ReactPlayer from "react-player";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 const Projects = () => {
   const [project, setProject] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -54,23 +54,20 @@ const Projects = () => {
               X
             </button>
             <div className={styles.popup}>
-                  <h1 className={styles.projectName}>{selectedProject.name}</h1>
+              <h1 className={styles.projectName}>{selectedProject.name}</h1>
               <div className={styles.container1}>
                 <div className={styles.header}>
-                  <img
-                    src={imgPrueba}
-                    alt={selectedProject.name}
-                    className={styles.modalImg}
+                  <ReactPlayer
+                    url="https://vimeo.com/906000568?share=copy"
+                    controls
                   />
                 </div>
                 <div className={styles.links}>
                   <a href={selectedProject.url} className={styles.url}>
-                    <BiWorld className={styles.icon} /> visite el
-                    sitio web
+                    <BiWorld className={styles.icon} /> visite el sitio web
                   </a>
-                  <a href={selectedProject.url} className={styles.url}>
-                    <FaGithub className={styles.icon} /> visite el
-                    repositorio
+                  <a href={selectedProject.repository} className={styles.url}>
+                    <FaGithub className={styles.icon} /> visite el repositorio
                   </a>
                 </div>
               </div>
