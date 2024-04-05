@@ -7,7 +7,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 const Projects = () => {
   const [project, setProject] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
-
+ const [loading, setLoading] = useState(false);
   useEffect(() => {
     fetch(`${url}/projects`)
       .then((response) => response.json())
