@@ -112,12 +112,12 @@
 }
 
 .button {
-  margin: 0 0 50% 85%;
   background-color: black;
-  border: solid 2px white;
-  border-radius: 50%;
-  width: 50px;
+  margin: 0 0 5% 50%;
+  border: solid 3px rgb(0, 0, 0);
   cursor: pointer;
+  border-radius: 10px;
+  width: 100px;
   height: 50px;
   font-size: 2em;
   color: white;
@@ -149,9 +149,14 @@
 .containerGlobal {
   padding-top: 70px;
 }
-.projectName{
+.projectName {
   color: black;
-  font-size:55px;
+  font-size: 55px;
   width: 100%;
   text-align: center;
+}
+.title {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }

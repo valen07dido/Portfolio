@@ -7,7 +7,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 const Projects = () => {
   const [project, setProject] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
- const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     fetch(`${url}/projects`)
       .then((response) => response.json())
@@ -50,11 +50,14 @@ const Projects = () => {
 
         {selectedProject && (
           <div className={styles.modal}>
-            <button onClick={handleClose} className={styles.button}>
+            <div className={styles.popup}>
+              <div className={styles.title}>
+
+              <h1 className={styles.projectName}>{selectedProject.name}</h1> 
+              <button onClick={handleClose} className={styles.button}>
               X
             </button>
-            <div className={styles.popup}>
-              <h1 className={styles.projectName}>{selectedProject.name}</h1>
+              </div>
               <div className={styles.container1}>
                 <div className={styles.header}>
                   <ReactPlayer
