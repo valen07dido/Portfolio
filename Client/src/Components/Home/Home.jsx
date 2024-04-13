@@ -32,7 +32,7 @@ const Home = () => {
       <div className={styles.container}>
         <div>
         <h1 className={styles.name}>Valentin Di Domenica</h1>
-        <h1>{"<Fullstack Developer/>"}</h1>
+        <h1 className={styles.role}>{"<Fullstack Developer/>"}</h1>
         </div>
         <img src={image} alt="icono developer" className={styles.iconDev} />
       </div>

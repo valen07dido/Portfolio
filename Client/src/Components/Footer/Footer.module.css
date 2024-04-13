@@ -2,12 +2,12 @@
   font-size: 30px;
   color: #ffffff;
   margin-bottom: 20px;
-  text-align: center; /* Center the title */
+  text-align: center;
 }
 
 .containerNet {
   display: flex;
-  justify-content: space-around; /* Distribute networks evenly */
+  justify-content: space-around;
 }
 
 .network {
@@ -33,9 +33,28 @@
 .container {
   margin: 50px;
   display: flex;
-  flex-direction: column; /* Stack sections vertically */
-  align-items: center; /* Center sections horizontally */
+  flex-direction: column;
+  align-items: center;
 }
-.FaWhatsapp{
+.FaWhatsapp {
   font-size: 35px;
+}
+
+@media (width < 768px) {
+  .containerNet {
+    display: flex;
+    flex-direction: column;
+  }
+  .network {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .link{
+    font-size: medium;
+  }
 }

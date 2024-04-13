@@ -31,7 +31,22 @@
 }
 .name{
  font-size: 10vh;
+
 }
 .redes{
     color:white;
+}
+
+@media (width < 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .name{
+    font-size: 5vh;
+    text-align: center;
+  }
+  .role{
+    text-align: center;
+  }
 }

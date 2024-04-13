@@ -5,6 +5,7 @@
   align-items: center;
   text-align: center;
   padding: 20px;
+  background-color: red;
 }
 
 .title {
@@ -13,12 +14,7 @@
   margin-bottom: 20px;
 }
 
-.network {
-  display: flex;
-  align-items: center;
-  background-color: red;
-  margin-bottom: 10px;
-}
+
 
 .link {
   display: flex;
@@ -158,4 +154,13 @@
 .error{
   font-size: 19px;
   color: red;
+}
+
+@media (width < 768px) {
+  .container {
+    width: 100%;
+  }
+  .form{
+    width: 100%;
+  }
 }
