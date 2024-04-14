@@ -39,19 +39,19 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
         <h1>Portfolio</h1>
       </div>
       <div className={open ? styles.active : styles.contain}>
-        <div className={styles.links} onClick={home}>
+        <div className={styles.links} onClick={() => {home(); handleClick();}}>
           <button className={styles.buttons}>Inicio</button>
         </div>
-        <div className={styles.links} onClick={about}>
+        <div className={styles.links} onClick={() => {about(); handleClick();}}>
           <button className={styles.buttons}>Sobre mi</button>
         </div>
-        <div className={styles.links} onClick={projects}>
+        <div className={styles.links} onClick={() => {projects(); handleClick();}}>
           <button className={styles.buttons}>Proyectos</button>
         </div>
-        <div className={styles.links} onClick={contact}>
+        <div className={styles.links} onClick={() => {contact(); handleClick();}}>
           <button className={styles.buttons}>Contacto</button>
         </div>
-        <div className={styles.links} onClick={footer}>
+        <div className={styles.links} onClick={() => {footer(); handleClick();}}>
           <button className={styles.buttons}>Redes Sociales</button>
         </div>
       </div>
@@ -61,13 +61,11 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
           <FaTimes
             className={styles.hamburger}
             size={20}
-            style={{ color: "#fff" }}
           />
         ) : (
           <FaBars
             className={styles.hamburger}
             size={20}
-            style={{ color: "#fff" }}
           />
         )}
       </div>
