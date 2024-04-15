@@ -36,7 +36,7 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
       style={{ opacity: navbarOpacity, transition: "opacity 0.5s" }}
     >
       <div className={styles.home} onClick={home}>
-        <h1>Portfolio</h1>
+        <h1 className={styles.title}>Portfolio</h1>
       </div>
       <div className={open ? styles.active : styles.contain}>
         <div className={styles.links} onClick={() => {home(); handleClick();}}>
