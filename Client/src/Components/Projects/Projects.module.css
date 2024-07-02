@@ -58,8 +58,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 75%;
-  height: 90%;
+  width: 90%;
+  height: 95%;
   text-align: center;
   padding: 20px;
   background: rgb(255, 255, 255);
@@ -161,6 +161,7 @@
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  margin-top: 50px;
 }
 .header {
   display: flex;
@@ -198,8 +199,9 @@
     height: 100px;
   }
   .popup {
-    height: 600px;
-    width: 90%;
+    margin: 0;
+    height: 700px;
+    width: 100%;
   }
 
   .projectName{
