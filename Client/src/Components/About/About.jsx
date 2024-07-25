@@ -45,6 +45,7 @@ const About = () => {
             ref={ref}
             className={styles.contentContainer}
             style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}
+            key={index}
           >
             <motion.div
               animate={controls}
