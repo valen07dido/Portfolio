@@ -9,6 +9,7 @@ const Navbar = ({ home, about, contact, projects, footer }) => {
 
   const handleClick = () => {
     setOpen(!open);
+    console.log(open)
   };
 
   useEffect(() => {
